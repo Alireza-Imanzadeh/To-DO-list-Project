@@ -1,0 +1,172 @@
+main {
+  width: 100%;
+  height: 150vh;
+  background-color: #E6E4DD;
+  padding-top: 50px;
+}
+main > .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 60px;
+  margin: 1px auto;
+  box-shadow: 1px 15px 25px -5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+}
+main > .box > div {
+  height: inherit;
+}
+main > .box > div:nth-of-type(1) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 430px;
+  padding-left: 15px;
+  font-size: 0.8rem;
+  color: white;
+  background-image: linear-gradient(to right, rgb(42, 72, 107) 0%, rgb(80, 122, 167) 100%);
+}
+main > .box > div:nth-of-type(2) {
+  width: 70px;
+  background-image: linear-gradient(to right, rgb(42, 72, 107) 0%, rgb(80, 122, 167) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main > .box > div:nth-of-type(2) > i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+main > .form {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 430px;
+  height: 180px;
+  margin: 1px auto;
+  margin-bottom: 20px;
+  transition: 0.8s;
+  transform-origin: top;
+  transform: scale(0);
+}
+main > .form > label {
+  color: #607D93;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  font-weight: bolder;
+}
+main > .form > label:nth-of-type(1), main > .form > label:nth-of-type(2), main > .form > label:nth-of-type(3) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32%;
+}
+main > .form > label:nth-of-type(4) {
+  display: flex;
+  width: 95%;
+}
+main > .form > #act,
+main > .form #title,
+main > .form #date {
+  display: flex;
+  width: 32%;
+  height: 35px;
+  text-transform: capitalize;
+  outline: none;
+  background-color: white;
+  padding-left: 5px;
+  box-shadow: 1px 5px 10px -5px rgba(0, 0, 0, 0.5);
+}
+main > .form #descr {
+  display: flex;
+  width: 95%;
+  height: 35px;
+  outline: none;
+  text-transform: capitalize;
+  padding-left: 5px;
+  box-shadow: 1px 3px 8px -5px rgba(0, 0, 0, 0.5);
+}
+main > .form span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 35px;
+  background-color: #4E78A4;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  cursor: pointer;
+  box-shadow: 1px 5px 10px -5px rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+}
+main > .list {
+  display: flex;
+  width: 500px;
+  height: 60px;
+  margin: 1px auto;
+  background-color: white;
+  transition: 0.8s;
+  box-shadow: 1px 15px 25px -5px rgba(0, 0, 0, 0.3);
+}
+main > .list > li {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+main > .list > li > div {
+  display: flex;
+  width: inherit;
+  height: inherit;
+}
+main > .list > li > div > h4 {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  text-transform: uppercase;
+  color: #EE4455;
+  font-weight: bolder;
+}
+main > .list > li > div > div {
+  width: 60%;
+}
+main > .list > li > div > div > span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  text-transform: capitalize;
+  width: 100%;
+  height: 50%;
+  padding-left: 5px;
+}
+main > .list > li > div > div > span:nth-of-type(1) {
+  font-size: 0.7rem;
+}
+main > .list > li > div > div > span:nth-of-type(2) {
+  font-size: 0.7rem;
+  color: darkgray;
+  font-weight: bolder;
+}
+main > .list > li > div > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: inherit;
+  text-transform: capitalize;
+  font-weight: bolder;
+  font-size: 0.9rem;
+}/*# sourceMappingURL=master.css.map */

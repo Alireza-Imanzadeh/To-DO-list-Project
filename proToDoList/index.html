@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="globaldef.css">
+    <title>To Do List</title>
+    <style>
+        .import {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="box">
+            <div>T&nbsp;H&nbsp;I&nbsp;N&nbsp;G&nbsp;S&nbsp;&nbsp; T&nbsp;O &nbsp;&nbsp;D&nbsp;O</div>
+            <div>
+                <i class="bi bi-plus-lg" onclick="_popForm(this)"></i>
+            </div>
+        </div>
+        <div class="form">
+
+            <label for="act">Action</label>
+            <label for="title">Title</label>
+            <label for="date">Date</label>
+
+            <select name="" id="act">
+                <option value="">Shopping</option>
+                <option value="">Work</option>
+                <option value="">Sport</option>
+                <option value="">Music</option>
+            </select>
+
+            <input type="text" id="title">
+
+            <select id="date">
+                <option value="">Today</option>
+                <option value="">Tomorrow</option>
+            </select>
+
+            <label for="descr">description</label>
+            <input type="text" id="descr">
+
+            <span onclick="addAct()">Add</span>
+        </div>
+        <ul class="list">
+            <li>
+                <div>
+                    <h4>action</h4>
+                    <div>
+                        <span>title</span>
+                        <span>description</span>
+                    </div>
+                    <span>date</span>
+                </div>
+            </li>
+        </ul>
+    </main>
+</body>
+<script>
+
+    let _form = document.getElementsByClassName('form')[0]
+    let _list = document.getElementsByClassName('list')[0]
+    let flag = true
+    function _popForm(self) {
+        if (flag) {
+            self.style.transform = 'rotate(135deg)'
+            _form.style.transform = 'scale(1)'
+            _form.style.transformOrigin = 'top'
+            _list.style.transform = 'translatey(0)'
+        } else {
+            self.style.transform = 'rotate(0deg)'
+            _form.style.transform = 'scale(0)'
+            _form.style.transformOrigin = 'top'
+            _list.style.transform = 'translatey(-160px)'
+        }
+        flag = !flag
+    }
+
+    let temp = document.getElementById('title').innerText
+    function addAct() {
+        if (temp == '' || temp == null) {
+            alert('Please Enter your Action')
+        } else {
+            let _tag = document.createElement('li')
+            _tag.classList.add('import')
+            _tag.innerHTML =`<div>
+                    <h4></h4>
+                    <div>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span></span>
+                </div>`
+                _list.appendChild(_tag)
+                temp=null
+                
+
+        }
+
+    }
+</script>
+
+</html>
